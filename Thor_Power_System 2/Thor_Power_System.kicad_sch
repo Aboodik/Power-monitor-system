@@ -1,0 +1,204 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "c60dfb45-c35a-489a-93c5-35a227895adb")
+	(paper "A4")
+	(title_block
+		(title "Thor Power Board - Monitoring, Protection, MCU")
+		(date "2026-10-25")
+		(rev "A")
+		(company "HABET - Iowa State")
+		(comment 1 "Root sheet")
+	)
+	(lib_symbols)
+	(text "5V_REG, 12V_REG  = regulator outputs (into the shunts)   |   5V_USB_OUT, 5V_6A_OUT, 12V_1A_OUT = board outputs"
+		(exclude_from_sim no)
+		(at 25.4 36.83 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "01effdf2-3597-4670-8cab-ded6a0931035")
+	)
+	(text "REG_5V_EN, REG_12V_EN = regulator enable pins   |   BMS_SDA, BMS_SCL = battery management (SMBus)"
+		(exclude_from_sim no)
+		(at 25.4 39.37 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "1b3d7f0d-867e-4180-89fc-aa8f98382b15")
+	)
+	(text "Sheets connect through global labels. Nets owned by other blocks:"
+		(exclude_from_sim no)
+		(at 25.4 33.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8bd36602-98a4-4081-b377-5fa8fe3f1b5b")
+	)
+	(text "Thor Power Board - Monitoring, Protection and MCU"
+		(exclude_from_sim no)
+		(at 25.4 25.4 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "ef7d63da-df1e-48d4-8c56-c09199ef57a8")
+	)
+	(sheet
+		(at 106.68 55.88)
+		(size 60.96 30.48)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "5ca793c8-1ca0-4216-9073-994a19ad419e")
+		(property "Sheetname" "Thor Output Protection (eFuses)"
+			(at 106.68 55.1684 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Thor_Protection.kicad_sch"
+			(at 106.68 86.9446 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Thor_Power_System"
+				(path "/c60dfb45-c35a-489a-93c5-35a227895adb"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 30.48 55.88)
+		(size 60.96 30.48)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "73608a13-6285-4db5-8827-7fdf06cf849d")
+		(property "Sheetname" "Thor Power Monitoring"
+			(at 30.48 55.1684 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Thor_Monitor.kicad_sch"
+			(at 30.48 86.9446 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Thor_Power_System"
+				(path "/c60dfb45-c35a-489a-93c5-35a227895adb"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 182.88 55.88)
+		(size 60.96 30.48)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "ef3c426b-55aa-4b9c-9042-2511c761f2da")
+		(property "Sheetname" "Thor MCU (Raspberry Pi Pico)"
+			(at 182.88 55.1684 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Thor_MCU.kicad_sch"
+			(at 182.88 86.9446 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Thor_Power_System"
+				(path "/c60dfb45-c35a-489a-93c5-35a227895adb"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

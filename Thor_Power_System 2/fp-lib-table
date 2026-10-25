@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "Thor_Power")(type "KiCad")(uri "${KIPRJMOD}/Thor_Power.pretty")(options "")(descr "Thor custom footprints"))
+)
