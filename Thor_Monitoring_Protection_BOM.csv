@@ -1,0 +1,26 @@
+Quantity,Manufacturer Part Number,Manufacturer,Description,Reference Designator,Qty Per Board,Customer Reference,Notes
+5,INA228AIDGSR,Texas Instruments,"Power monitor IC, 85V, 20-bit, I2C, -40 to 125C, VSSOP-10","U101, U102",2,Monitor,U101 = 5V bus (I2C 0x40); U102 = 12V rail (I2C 0x41)
+5,TPS259474ARPWR,Texas Instruments,"eFuse 2.7-23V 5.5A, circuit breaker, auto-retry, PG, -40 to 125C, QFN-10 2x2mm","U201, U202",2,Protection,U201 = 5V 3A USB (limit 3.76A); U202 = 12V 1A (limit 1.31A); no-lead package needs reflow or hot air
+3,TPS259480AYWPR,Texas Instruments,"eFuse 3.5-23V 8A, active current limit, auto-retry, FLT, -40 to 125C, WCSP-12",U203,1,Protection,5V 6A rail (limit 6.93A); chip-scale ball package needs machine assembly
+4,WSL25125L000FEA,Vishay Dale,"Current sense resistor 5 mOhm 1% 1W 2512, +/-110 ppm/C",RS101,1,Monitor,Shunt for 5V bus (CH1)
+4,WSL1206R0200FEA,Vishay Dale,"Current sense resistor 20 mOhm 1% 0.25W 1206, +/-75 ppm/C",RS102,1,Monitor,Shunt for 12V rail (CH2)
+8,B340A-13-F,Diodes Incorporated,"Schottky diode 40V 3A, SMA","D201, D202, D203, D204",4,Protection + MCU,"D201-D203: OUT-to-GND clamp at each eFuse output; D204: 5V_BUS to Pico VSYS"
+13,RC0603FR-0710RL,Yageo,"Resistor 10 Ohm 1% 1/10W 0603","R101, R102, R103, R104",4,Monitor,INA228 IN+/IN- series resistors
+20,RC0603FR-0710KL,Yageo,"Resistor 10k 1% 1/10W 0603","R105, R106, R204, R205, R206, R217, R218, R219",8,Monitor + Protection,"Pull-ups to 3V3: INA228 ALERTs (R105-R106), eFuse EN default-ON (R204-R206; 10k so it overrides the RP2040 50-80k boot pull-down), eFuse PG/FLT (R217-R219)"
+10,RC0603FR-074K7L,Yageo,"Resistor 4.7k 1% 1/10W 0603","R107, R108",2,Monitor,I2C SDA/SCL pull-ups (one pair for whole bus)
+10,RC0603FR-07100KL,Yageo,"Resistor 100k 1% 1/10W 0603","R207, R208, R209",3,Protection,OVLO divider tops (R207-R209)
+10,RC0603FR-0724K9L,Yageo,"Resistor 24.9k 1% 1/10W 0603","R210, R212",2,Protection,OVLO divider bottoms for 5V eFuses (trip at 6.0V)
+10,RC0603FR-079K31L,Yageo,"Resistor 9.31k 1% 1/10W 0603",R211,1,Protection,OVLO divider bottom for 12V eFuse (trip at 14.1V)
+10,RC0603FR-0747KL,Yageo,"Resistor 47k 1% 1/10W 0603","R213, R215",2,Protection,PGTH divider tops (from OUT)
+10,RC0603FR-0717K4L,Yageo,"Resistor 17.4k 1% 1/10W 0603",R214,1,Protection,PGTH divider bottom U201 (PG at 4.44V)
+10,RC0603FR-075K9L,Yageo,"Resistor 5.9k 1% 1/10W 0603",R216,1,Protection,PGTH divider bottom U202 (PG at 10.76V)
+10,RC0603FR-07887RL,Yageo,"Resistor 887 Ohm 1% 1/10W 0603",R201,1,Protection,U201 ILM current-limit resistor
+10,RC0603FR-072K55L,Yageo,"Resistor 2.55k 1% 1/10W 0603",R202,1,Protection,U202 ILM current-limit resistor
+10,RC0603FR-07698RL,Yageo,"Resistor 698 Ohm 1% 1/10W 0603",R203,1,Protection,U203 ILM current-limit resistor
+10,GRM188R71C104KA01D,Murata,"Capacitor 100nF 16V X7R 0603","C101, C102",2,Monitor,INA228 VS decoupling
+10,GRM188R71H104KA93D,Murata,"Capacitor 100nF 50V X7R 0603","C103, C104",0,Monitor,Do not populate (optional INA228 input filter footprints)
+10,GRM188R71C105KA12D,Murata,"Capacitor 1uF 16V X7R 0603",C105,1,Monitor,3V3 bulk near monitors
+17,GRM21BR71H105KA12L,Murata,"Capacitor 1uF 50V X7R 0805","C207, C208, C209, C210, C211, C212",6,Protection,eFuse IN and OUT ceramic caps
+15,GRM1885C1H222JA01D,Murata,"Capacitor 2.2nF 50V C0G 0603","C201, C202, C203, C204, C205",5,Protection,"ITIMER caps (C201-C203, ~1.8ms blanking); dVdt caps U201/U202 (C204-C205)"
+10,GRM1885C1H472JA01D,Murata,"Capacitor 4.7nF 50V C0G 0603",C206,1,Protection,dVdt cap U203
+2,SC0917,Raspberry Pi,"Raspberry Pi Pico H (RP2040), headers fitted",U301,1,MCU,"Plugs into 2x20 female headers (or SC0915 soldered). DigiKey 2648-SC0917-ND"
